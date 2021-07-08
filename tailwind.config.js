@@ -20,6 +20,9 @@ module.exports = {
         primary: '#09D261',
         secondary: '#34B7F2',
       },
+      screens: {
+        xs: '320px',
+      },
     },
   },
   variants: {

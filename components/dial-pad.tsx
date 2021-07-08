@@ -8,10 +8,10 @@ type Props = {
 
 export default function DialPad({ onAdd }) {
   return (
-    <fieldset className="flex flex-col gap-5 sm:gap-6 p-3 items-center">
+    <fieldset className="flex flex-col gap-4 xs:gap-6 p-3 items-center">
       {PAD_NUMBERS.map((sequence, idx) => (
         <div
-          className="grid grid-cols-3 gap-5 sm:gap-6 text-2xl place-items-center"
+          className="grid grid-cols-3 gap-4 xs:gap-6 text-2xl place-items-center"
           key={`seq-${idx}`}
         >
           {sequence.map((i) => (
@@ -19,7 +19,7 @@ export default function DialPad({ onAdd }) {
               onClick={() => onAdd(i)}
               type="button"
               className={cx(
-                'focused rounded-full shadow font-bold w-16 h-16 sm:h-20 sm:w-20 bt',
+                'focused rounded-full shadow font-bold w-16 xs:w-20 h-16 xs:h-20 bt',
                 i === 0 && 'col-start-2',
               )}
               key={i}
