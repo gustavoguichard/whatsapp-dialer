@@ -22,9 +22,11 @@ export default function NumberInput({
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative flex">
-        <Listbox.Button className="relative p-2 text-lg bg-white dark:bg-transparent dark:border-green-200 dark:text-white border rounded shadow focused">
-          {getFlagEmoji(selected)}{' '}
-          <span className="">{extractCountryNumber(allCodes[selected])}</span>
+        <Listbox.Button className="relative flex items-center p-2 text-lg bg-white dark:bg-transparent dark:border-green-200 dark:text-white border rounded shadow focused">
+          {getFlagEmoji(selected)}
+          <span className="ml-1">
+            {extractCountryNumber(allCodes[selected])}
+          </span>
         </Listbox.Button>
         <Transition
           as={Fragment}
