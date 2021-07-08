@@ -24,7 +24,7 @@ export default function Home({ countryCodes }: Props) {
   const addNumber = (number: number) => setValue((val) => `${val}${number}`)
   const handleErase = () => setValue((val) => val.slice(0, -1))
   return (
-    <div className="flex items-end justify-center min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="flex items-end md:items-center justify-center min-h-screen bg-gray-50 md:bg-gray-200 dark:bg-gray-900 dark:md:bg-gray-800">
       <Head>
         <title>
           Whatsapp dialer - Dial and send messages without adding to your
@@ -37,7 +37,7 @@ export default function Home({ countryCodes }: Props) {
       </Head>
 
       <form
-        className="flex flex-col justify-between flex-grow max-w-[380px] w-full h-screen max-h-[680px] dark:bg-transparent overflow-hidden dark:shadow-none"
+        className="flex flex-col justify-between flex-grow max-w-[380px] w-full h-screen max-h-[680px] md:h-auto md:dark:bg-gray-900 md:bg-gray-50 rounded md:shadow-lg dark:bg-transparent overflow-hidden dark:shadow-none"
         onSubmit={handleSubmit}
       >
         <fieldset className="p-2 flex items-stretch gap-1">
