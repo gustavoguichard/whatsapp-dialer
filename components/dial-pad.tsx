@@ -8,10 +8,10 @@ type Props = {
 
 export default function DialPad({ onAdd }) {
   return (
-    <fieldset className="flex flex-col gap-3 p-3">
+    <fieldset className="flex flex-col gap-5 p-3 items-center">
       {PAD_NUMBERS.map((sequence, idx) => (
         <div
-          className="grid grid-cols-3 gap-3 text-2xl place-items-center"
+          className="grid grid-cols-3 gap-5 text-2xl place-items-center"
           key={`seq-${idx}`}
         >
           {sequence.map((i) => (

@@ -24,7 +24,7 @@ export default function Home({ countryCodes }: Props) {
   const addNumber = (number: number) => setValue((val) => `${val}${number}`)
   const handleErase = () => setValue((val) => val.slice(0, -1))
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-200 dark:bg-gray-800">
+    <div className="flex items-end justify-center min-h-screen bg-gray-50 dark:bg-gray-900">
       <Head>
         <title>
           Whatsapp dialer - Dial and send messages without adding to your
@@ -36,31 +36,32 @@ export default function Home({ countryCodes }: Props) {
         />
       </Head>
 
-      <main className="max-w-[360px] w-full shadow-lg rounded-lg bg-gray-50 dark:bg-gray-900 overflow-hidden">
-        <form className="flex flex-col" onSubmit={handleSubmit}>
-          <fieldset className="p-2 flex items-stretch gap-1">
-            <CountrySelector {...{ selected, setSelected, countryCodes }} />
-            <NumberInput onChange={handleChange} value={value} />
-          </fieldset>
-          <DialPad onAdd={addNumber} />
-          <div className="flex p-2 gap-2">
-            <button
-              className="bt focused text-xl font-bold p-2"
-              type="button"
-              onClick={handleErase}
-              aria-label="Delete last number"
-            >
-              <DeleteSVG />
-            </button>
-            <button
-              className="focused bg-primary text-white shadow rounded text-xl font-bold p-2 flex-grow"
-              type="submit"
-            >
-              Go texting!
-            </button>
-          </div>
-        </form>
-      </main>
+      <form
+        className="flex flex-col justify-between flex-grow max-w-[380px] w-full h-screen max-h-[640px] dark:bg-transparent overflow-hidden dark:shadow-none"
+        onSubmit={handleSubmit}
+      >
+        <fieldset className="p-2 flex items-stretch gap-1">
+          <CountrySelector {...{ selected, setSelected, countryCodes }} />
+          <NumberInput onChange={handleChange} value={value} />
+        </fieldset>
+        <DialPad onAdd={addNumber} />
+        <div className="flex p-2 gap-2">
+          <button
+            className="bt focused text-xl font-bold p-2"
+            type="button"
+            onClick={handleErase}
+            aria-label="Delete last number"
+          >
+            <DeleteSVG />
+          </button>
+          <button
+            className="focused bg-primary text-white shadow rounded text-xl font-bold p-2 flex-grow"
+            type="submit"
+          >
+            Go texting!
+          </button>
+        </div>
+      </form>
     </div>
   )
 }
