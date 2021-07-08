@@ -31,10 +31,9 @@ export default function Home({ countryCodes }: Props) {
           contacts
         </title>
         <meta
-          name="description"
-          content="Dial and send messages in whatsapp without adding to your contacts"
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="max-w-[360px] w-full shadow-lg rounded-lg bg-gray-50 dark:bg-gray-900 overflow-hidden">

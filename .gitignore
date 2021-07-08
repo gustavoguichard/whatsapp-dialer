@@ -33,3 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 styles/index.css
+public/workbox-*.js
+public/workbox-*.js.map

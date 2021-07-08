@@ -1,0 +1,16 @@
+{
+  "name": "Whatsapp Dialer",
+  "short_name": "ZapDial",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#09D261",
+  "background_color": "#131C21",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
