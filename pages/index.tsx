@@ -37,7 +37,7 @@ export default function Home({ countryCodes }: Props) {
       </Head>
 
       <form
-        className="flex flex-col justify-between flex-grow max-w-[380px] w-full h-screen max-h-[640px] dark:bg-transparent overflow-hidden dark:shadow-none"
+        className="flex flex-col justify-between flex-grow max-w-[380px] w-full h-screen max-h-[680px] dark:bg-transparent overflow-hidden dark:shadow-none"
         onSubmit={handleSubmit}
       >
         <fieldset className="p-2 flex items-stretch gap-1">
