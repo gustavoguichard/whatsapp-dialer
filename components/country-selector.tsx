@@ -49,16 +49,14 @@ export default function NumberInput({
                 value={code}
               >
                 {({ selected }) => (
-                  <>
-                    <span
-                      className={cx(
-                        selected ? 'font-medium' : 'font-normal',
-                        'block truncate',
-                      )}
-                    >
-                      {code} {getFlagEmoji(code)} {extractCountryNumber(number)}
-                    </span>
-                  </>
+                  <span
+                    className={cx(
+                      selected ? 'font-medium' : 'font-normal',
+                      'block truncate',
+                    )}
+                  >
+                    {code} {getFlagEmoji(code)} {extractCountryNumber(number)}
+                  </span>
                 )}
               </Listbox.Option>
             ))}
