@@ -6,7 +6,7 @@ type Props = {
   onAdd: (n: number) => void
 }
 
-export default function DialPad({ onAdd }) {
+export default function DialPad({ onAdd }: Props) {
   return (
     <fieldset className="flex flex-col gap-4 xs:gap-6 p-3 items-center">
       {PAD_NUMBERS.map((sequence, idx) => (
